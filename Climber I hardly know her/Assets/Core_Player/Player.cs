@@ -8,24 +8,30 @@ using Debug = UnityEngine.Debug;
 public class Player : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed;          
+    public float moveSpeed;
     public float jumpForce;
 
     [Header("Logic")]
     [SerializeField] private bool isGrounded;
-    [SerializeField] protected float abilityCooldown;
-    [SerializeField] protected float abilityCooldownCounter;
+    [Tooltip("Highest possible health")]
+    [SerializeField] protected float MaxHealth;
+    [Tooltip("Current health")]
+    [SerializeField] protected float Health;
+    [Tooltip("Time in seconds for ability to recharge")]
+    [SerializeField] protected float abilityCooldownMaxTime;
+    [Tooltip("Current time in seconds until ability recharges")]
+    [SerializeField] protected float abilityCooldownTime;
 
     [Header("Assigned Fields")]
+    [Tooltip("Player_1 for WASDQ, Player_2 for IJKLU")]
     [SerializeField] private PlayerID playerID;
-    private KeyCode Left;
-    private KeyCode Right;
-    private KeyCode Up;
-    private KeyCode Down;
-    private KeyCode Ability;
+    private KeyCode key_Left;
+    private KeyCode key_Right;
+    private KeyCode key_Up;
+    private KeyCode key_Down;
+    private KeyCode key_Ability;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] protected GameObject projectile;
     [SerializeField] private Rigidbody2D rb;
 
 
@@ -40,36 +46,40 @@ public class Player : MonoBehaviour
     
     private void Awake()
     {
+        //In the inspector, choose Player_1 for WASDQ and Player_2 for IJKLU
+        
         if (playerID == PlayerID.Player_1)
         {
-            Left = KeyCode.A;
-            Right = KeyCode.D;
-            Up = KeyCode.W;
-            Down = KeyCode.S;
-            Ability = KeyCode.Q;
+            key_Left = KeyCode.A;
+            key_Right = KeyCode.D;
+            key_Up = KeyCode.W;
+            key_Down = KeyCode.S;
+            key_Ability = KeyCode.Q;
         }
         if (playerID == PlayerID.Player_2)
         {
-            Left = KeyCode.J;
-            Right = KeyCode.L;
-            Up = KeyCode.I;
-            Down = KeyCode.K;
-            Ability = KeyCode.U;
+            key_Left = KeyCode.J;
+            key_Right = KeyCode.L;
+            key_Up = KeyCode.I;
+            key_Down = KeyCode.K;
+            key_Ability = KeyCode.U;
         }
+
+        Health = MaxHealth;
     }
 
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
 
         moveInput = 0;
 
-        if (Input.GetKey(Left)) moveInput = -1;
-        if (Input.GetKey(Right)) moveInput = 1;
+        if (Input.GetKey(key_Left)) moveInput = -1;
+        if (Input.GetKey(key_Right)) moveInput = 1;
 
         if(moveInput != 0)
-                    facingDirection = moveInput;
+            facingDirection = moveInput;
 
         if (Mathf.Abs(rb.linearVelocityX) > 5f)
             moveInput = 0;
@@ -85,30 +95,39 @@ public class Player : MonoBehaviour
 
         }
 
-        if (isGrounded && Input.GetKey(Up))
+        if (isGrounded && Input.GetKey(key_Up))
         {
             rb.AddForce(new Vector2(0, jumpForce));
         }
 
 
 
-        if (Input.GetKey(Ability) && abilityCooldownCounter <= 0)
+        if (Input.GetKey(key_Ability) && abilityCooldownTime <= 0)
             UseAbility();
 
-        if(abilityCooldownCounter > 0)
+        if(abilityCooldownTime > 0)
         {
-            abilityCooldownCounter -= Time.fixedDeltaTime;
-            if (abilityCooldownCounter < 0)
-                abilityCooldownCounter = 0;
+            abilityCooldownTime -= Time.fixedDeltaTime;
+            if (abilityCooldownTime < 0)
+                abilityCooldownTime = 0;
         }
 
     }
 
-    public virtual void UseAbility()
+    protected virtual void UseAbility()
     {
-        GameObject newProjectile = Instantiate(projectile, (Vector2)this.transform.position + new Vector2(1.5f * facingDirection, 0), Quaternion.identity);
-        abilityCooldownCounter = abilityCooldown;
-        newProjectile.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(8.5f * facingDirection, 5);
-        Debug.Log("super");
+        //Your ability logic goes here in the subclass
+    }
+    
+    public void TakeDamage(float damage)
+    {
+        Health -= damage;
+        if (Health <= 0)
+            Die();
+    } 
+    
+    private void Die()
+    {
+        Destroy(gameObject);
     }
 }
