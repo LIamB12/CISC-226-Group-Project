@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 57151410338899955, guid: a5dd32d160e58fc4ea064ec07138b479, type: 3}
+      propertyPath: m_GravityScale
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7098625517581414480, guid: a5dd32d160e58fc4ea064ec07138b479, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.28969
@@ -413,6 +417,10 @@ PrefabInstance:
     - target: {fileID: -997591251856861915, guid: a5dd32d160e58fc4ea064ec07138b479, type: 3}
       propertyPath: playerID
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 57151410338899955, guid: a5dd32d160e58fc4ea064ec07138b479, type: 3}
+      propertyPath: m_GravityScale
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7098625517581414480, guid: a5dd32d160e58fc4ea064ec07138b479, type: 3}
       propertyPath: m_LocalPosition.x

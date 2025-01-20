@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
+    public float maxMoveSpeed;
     public float jumpForce;
 
     [Header("Logic")]
