@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
+    public float maxMoveSpeed;
     public float jumpForce;
 
     [Header("Logic")]
@@ -55,6 +56,7 @@ public class Player : MonoBehaviour
             key_Up = KeyCode.W;
             key_Down = KeyCode.S;
             key_Ability = KeyCode.Q;
+            facingDirection = 1;  
         }
         if (playerID == PlayerID.Player_2)
         {
@@ -63,15 +65,15 @@ public class Player : MonoBehaviour
             key_Up = KeyCode.I;
             key_Down = KeyCode.K;
             key_Ability = KeyCode.U;
+            facingDirection = -1;
         }
 
         Health = MaxHealth;
     }
 
-
     private void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(groundCheck.lossyScale.x, 0.3f), 0, groundLayer);
 
         moveInput = 0;
 
@@ -81,7 +83,7 @@ public class Player : MonoBehaviour
         if(moveInput != 0)
             facingDirection = moveInput;
 
-        if (Mathf.Abs(rb.linearVelocityX) > 5f)
+        if (Mathf.Abs(rb.linearVelocityX) > maxMoveSpeed)
             moveInput = 0;
 
         rb.AddForce(new Vector2(moveInput * moveSpeed, 0));

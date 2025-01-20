@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 50
+  maxMoveSpeed: 5
   jumpForce: 150
   isGrounded: 0
   MaxHealth: 100

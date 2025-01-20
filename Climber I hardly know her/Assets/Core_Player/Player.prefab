@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 50
+  maxMoveSpeed: 5
   jumpForce: 150
   isGrounded: 0
   MaxHealth: 100
@@ -91,7 +92,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  projectile: {fileID: 8563172876045732804, guid: 16e1db8b58ecd9e4b9d68c4cce8aed73, type: 3}
   rb: {fileID: 57151410338899955}
 --- !u!212 &6426090177520881909
 SpriteRenderer:
