@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
         Player_2
     }
     
-    private void Awake()
+    private void Start()
     {
         //In the inspector, choose Player_1 for WASDQ and Player_2 for IJKLU
         
