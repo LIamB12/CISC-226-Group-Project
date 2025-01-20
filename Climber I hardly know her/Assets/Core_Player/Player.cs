@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
     [Header("Assigned Fields")]
     [Tooltip("Player_1 for WASDQ, Player_2 for IJKLU")]
-    [SerializeField] private PlayerID playerID;
+    [SerializeField] public PlayerID playerID;
     private KeyCode key_Left;
     private KeyCode key_Right;
     private KeyCode key_Up;
@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
         Player_2
     }
     
-    private void Awake()
+    private void Start()
     {
         //In the inspector, choose Player_1 for WASDQ and Player_2 for IJKLU
         
