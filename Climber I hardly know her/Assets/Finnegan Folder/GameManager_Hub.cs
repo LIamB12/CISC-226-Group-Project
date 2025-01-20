@@ -3,16 +3,24 @@ using UnityEngine;
 
 public class GameManager_Hub : MonoBehaviour
 {
-    [SerializeField] private GameObject baseCharacter;
-    [SerializeField] private GameObject Player1Spawn;
-    [SerializeField] private GameObject Player2Spawn;
+    [SerializeField] private PlayerSpawner Player1Spawn;
+    private bool Player1Spawned;
+    [SerializeField] private PlayerSpawner Player2Spawn;
+    private bool Player2Spawned;
+
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.W))
-            Instantiate(baseCharacter, Player1Spawn.transform.position, Quaternion.identity).GetComponent<Player>().playerID = Player.PlayerID.Player_1;
+        if (Player1Spawned == false && Input.GetKey(KeyCode.W))
+        {
+            Player1Spawn.SpawnPlayer(Player.PlayerID.Player_1);
+            Player1Spawned = true;
+        }
 
-        if (Input.GetKey(KeyCode.I))
-            Instantiate(baseCharacter, Player2Spawn.transform.position, Quaternion.identity).GetComponent<Player>().playerID = Player.PlayerID.Player_2;
+        if (Player2Spawned == false && Input.GetKey(KeyCode.I))
+        {
+            Player2Spawn.SpawnPlayer(Player.PlayerID.Player_2);
+            Player2Spawned = true;
+        }
     }
 }

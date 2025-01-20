@@ -3,25 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0a2842a4-e505-49b9-adfd-d535a72bb4e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Climber I hardly know her/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Climber I hardly know her/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core_Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core_Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Finnegan Folder/PlatformScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Finnegan Folder/PlatformScript.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main Menu/MainMenuManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main Menu/MainMenuManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/My Character.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/My Character/My Character Class.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/My Character/My Character Class.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/My Character/My Character Script.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/My Character/My Character Script.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/My Character/Projectile.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/My Character/Projectile.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/My Character/Projectile.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/My Character/Projectile.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Finnegan Folder/GameManager_Hub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Finnegan Folder/GameManager_Hub.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Finnegan Folder/Hub.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Finnegan Folder/Hub.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main Menu/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main Menu/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/Sample Character/Projectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player Classes/Sample Character/Projectile.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +16,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="SWEA" />
   </component>
   <component name="ProjectId" id="2rrqT3Q1QJUy29qLy6HihGDoft5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

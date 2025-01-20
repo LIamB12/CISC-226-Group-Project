@@ -1,18 +1,15 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class MainMenuScript : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
 
 
-    void Start()
+    public void LoadScene(String level)
     {
-        
-    }
-
-    void Update()
-    {
-        
+        SceneManager.LoadScene(level);
     }
     
 
