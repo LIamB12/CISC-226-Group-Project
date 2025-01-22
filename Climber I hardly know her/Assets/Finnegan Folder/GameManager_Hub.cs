@@ -7,9 +7,15 @@ public class GameManager_Hub : MonoBehaviour
     private bool Player1Spawned;
     [SerializeField] private PlayerSpawner Player2Spawn;
     private bool Player2Spawned;
+    
+    [Header("Class Selector")]
+    [SerializeField] private GameObject ClassSelectorObj;
+    [SerializeField] private GameObject ClassGrid;
+    [SerializeField] private GameObject[] ClassArray;
+    
 
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (Player1Spawned == false && Input.GetKey(KeyCode.W))
         {
@@ -22,5 +28,13 @@ public class GameManager_Hub : MonoBehaviour
             Player2Spawn.SpawnPlayer(Player.PlayerID.Player_2);
             Player2Spawned = true;
         }
+        
+        if(Input.GetKeyDown(KeyCode.C))
+            ToggleClassSelector();
+    }
+
+    private void ToggleClassSelector()
+    {
+        ClassSelectorObj.SetActive(!ClassSelectorObj.activeSelf);
     }
 }
