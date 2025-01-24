@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 5555846694334176044}
   - component: {fileID: -7306559140873725712}
   m_Layer: 0
-  m_Name: ClassWidgetTemplate
+  m_Name: Widget_ClassWidget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClassIcon: {fileID: 8196113818969083692}
   ClassName: {fileID: 3758511386854913509}
+  ClassType: {fileID: 8520808103047806461, guid: a5dd32d160e58fc4ea064ec07138b479, type: 3}
 --- !u!1 &8847594929728643430
 GameObject:
   m_ObjectHideFlags: 0

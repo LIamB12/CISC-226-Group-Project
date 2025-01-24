@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     [HideInInspector] public KeyCode key_Up;
     [HideInInspector] public KeyCode key_Down;
     [HideInInspector] public KeyCode key_Ability;
+    [HideInInspector] public bool immobilized = false;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Rigidbody2D rb;
@@ -71,6 +72,7 @@ public class Player : MonoBehaviour
         }
 
         Health = MaxHealth;
+        
     }
 
     private void FixedUpdate()
@@ -88,6 +90,9 @@ public class Player : MonoBehaviour
         if (Mathf.Abs(rb.linearVelocityX) > maxMoveSpeed)
             moveInput = 0;
 
+        if (immobilized)
+            moveInput = 0;
+        
         rb.AddForce(new Vector2(moveInput * moveSpeed, 0));
 
         if (moveInput == 0f)
