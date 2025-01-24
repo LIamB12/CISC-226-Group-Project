@@ -6,9 +6,11 @@ public class PlayerSpawner : MonoBehaviour
     [SerializeField] private GameObject CharacterClass;
     
 
-    public void SpawnPlayer(Player.PlayerID id)
+    public GameObject SpawnPlayer(Player.PlayerID id)
     {
-        Instantiate(CharacterClass, transform.position, Quaternion.identity).GetComponent<Player>().playerID = id;
+        GameObject player = Instantiate(CharacterClass, transform.position, Quaternion.identity);
+        player.GetComponent<Player>().playerID = id;
+        return player;
     }
     
 }

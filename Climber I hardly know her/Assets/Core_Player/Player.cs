@@ -28,11 +28,11 @@ public class Player : MonoBehaviour
     [Tooltip("Player_1 for WASDQ, Player_2 for IJKLU")]
     [SerializeField] public PlayerID playerID;
     [SerializeField] public Sprite ClassIcon;
-    private KeyCode key_Left;
-    private KeyCode key_Right;
-    private KeyCode key_Up;
-    private KeyCode key_Down;
-    private KeyCode key_Ability;
+    [HideInInspector] public KeyCode key_Left;
+    [HideInInspector] public KeyCode key_Right;
+    [HideInInspector] public KeyCode key_Up;
+    [HideInInspector] public KeyCode key_Down;
+    [HideInInspector] public KeyCode key_Ability;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Rigidbody2D rb;
