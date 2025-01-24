@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
 public class Player : MonoBehaviour
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour
     [Header("Assigned Fields")]
     [Tooltip("Player_1 for WASDQ, Player_2 for IJKLU")]
     [SerializeField] public PlayerID playerID;
+    [SerializeField] public Sprite ClassIcon;
     private KeyCode key_Left;
     private KeyCode key_Right;
     private KeyCode key_Up;

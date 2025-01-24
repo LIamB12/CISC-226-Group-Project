@@ -12,8 +12,18 @@ public class GameManager_Hub : MonoBehaviour
     [SerializeField] private GameObject ClassSelectorObj;
     [SerializeField] private GameObject ClassGrid;
     [SerializeField] private GameObject[] ClassArray;
-    
+    [SerializeField] private GameObject ClassWidgetTemplate;
 
+
+    private void Awake()
+    {
+        foreach (GameObject i in ClassArray)
+        {
+            GameObject newWidget = Instantiate(ClassWidgetTemplate, ClassGrid.transform);
+            newWidget.GetComponent<ClassWidget>().ClassIcon.sprite = i.GetComponent<Player>().ClassIcon;
+            newWidget.GetComponent<ClassWidget>().ClassName.text = i.gameObject.name;
+        }
+    }
 
     private void Update()
     {

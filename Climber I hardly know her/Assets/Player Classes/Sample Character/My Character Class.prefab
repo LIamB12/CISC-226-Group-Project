@@ -88,6 +88,7 @@ MonoBehaviour:
   abilityCooldownMaxTime: 0.1
   abilityCooldownTime: 0
   playerID: 0
+  ClassIcon: {fileID: -7912488119901016360, guid: 0bf0bb5fda120b347b9fcdff82202b26, type: 3}
   groundCheck: {fileID: 5539787175470112774}
   groundLayer:
     serializedVersion: 2
