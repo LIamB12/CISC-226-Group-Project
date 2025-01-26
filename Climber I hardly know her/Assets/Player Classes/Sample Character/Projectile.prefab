@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85235c5f9a693fb418b502a2c3dc6283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpirationTimer: 5
-  Damage: 15
+  expirationTimer: 5
+  damage: 15
   owner: {fileID: 0}
 --- !u!212 &1350081095090938722
 SpriteRenderer:
