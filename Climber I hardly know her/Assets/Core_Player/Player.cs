@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
 public class Player : MonoBehaviour
@@ -25,12 +26,14 @@ public class Player : MonoBehaviour
 
     [Header("Assigned Fields")]
     [Tooltip("Player_1 for WASDQ, Player_2 for IJKLU")]
-    [SerializeField] private PlayerID playerID;
-    private KeyCode key_Left;
-    private KeyCode key_Right;
-    private KeyCode key_Up;
-    private KeyCode key_Down;
-    private KeyCode key_Ability;
+    [SerializeField] public PlayerID playerID;
+    [SerializeField] public Sprite ClassIcon;
+    [HideInInspector] public KeyCode key_Left;
+    [HideInInspector] public KeyCode key_Right;
+    [HideInInspector] public KeyCode key_Up;
+    [HideInInspector] public KeyCode key_Down;
+    [HideInInspector] public KeyCode key_Ability;
+    [HideInInspector] public bool immobilized = false;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Rigidbody2D rb;
@@ -69,11 +72,12 @@ public class Player : MonoBehaviour
         }
 
         Health = MaxHealth;
+        
     }
 
     private void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(gameObject.GetComponent<BoxCollider2D>().size.x, 0.3f), 0, groundLayer);
+        isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(gameObject.GetComponent<BoxCollider2D>().size.x, 0.1f), 0, groundLayer);
 
         moveInput = 0;
 
@@ -86,26 +90,23 @@ public class Player : MonoBehaviour
         if (Mathf.Abs(rb.linearVelocityX) > maxMoveSpeed)
             moveInput = 0;
 
-        rb.AddForce(new Vector2(moveInput * moveSpeed, 0));
-
         if (moveInput == 0f)
         {
-            if (Mathf.Abs(rb.linearVelocityX) > 1)
-            {
-                rb.AddForce(new Vector2(-rb.linearVelocityX * 10, 0));
-            }
-
+            //if (Mathf.Abs(rb.linearVelocityX) > 1)
+            rb.AddForce(new Vector2(-rb.linearVelocityX * 20, 0));
         }
 
-        if (isGrounded && Input.GetKey(key_Up))
+
+        if (!GameInstance.PlayersImmobilized)
         {
-            rb.AddForce(new Vector2(0, jumpForce));
+            rb.AddForce(new Vector2(moveInput * moveSpeed, 0));
+
+            if (isGrounded && Input.GetKey(key_Up))
+                rb.AddForce(new Vector2(0, jumpForce));
+            
+            if (Input.GetKey(key_Ability) && abilityCooldownTime <= 0)
+                UseAbility();
         }
-
-
-
-        if (Input.GetKey(key_Ability) && abilityCooldownTime <= 0)
-            UseAbility();
 
         if(abilityCooldownTime > 0)
         {

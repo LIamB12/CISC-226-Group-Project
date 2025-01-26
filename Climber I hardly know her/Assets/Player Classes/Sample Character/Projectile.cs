@@ -3,15 +3,15 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour 
 {
-    [SerializeField] private float ExpirationTimer;
-    [SerializeField] private float Damage;
+    [SerializeField] private float expirationTimer;
+    [SerializeField] private float damage;
     [HideInInspector] public GameObject owner;
 
     void FixedUpdate()
     {
-        ExpirationTimer -= Time.fixedDeltaTime;
+        expirationTimer -= Time.fixedDeltaTime;
 
-        if (ExpirationTimer <= 0)
+        if (expirationTimer <= 0)
             Destroy(gameObject);
     }
 
@@ -20,7 +20,7 @@ public class Projectile : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player") && collision.gameObject != owner)
         {
             Player collidingPlayer = collision.gameObject.GetComponent<Player>();
-            collidingPlayer.TakeDamage(Damage);
+            collidingPlayer.TakeDamage(damage);
             Destroy(gameObject);
         }
     }
