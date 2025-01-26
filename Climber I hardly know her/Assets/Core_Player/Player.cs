@@ -9,9 +9,9 @@ using Debug = UnityEngine.Debug;
 public class Player : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed;
-    public float maxMoveSpeed;
-    public float jumpForce;
+    public float moveSpeed = 600;
+    public float maxMoveSpeed = 500;
+    public float jumpForce = 1000;
 
     [Header("Logic")]
     [SerializeField] private bool isGrounded;
