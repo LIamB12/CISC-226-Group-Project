@@ -42,22 +42,25 @@ public class GameManager_Hub : MonoBehaviour
         
         ClassSelector_Player1 = new ClassSelector(); 
         ClassSelector_Player2 = new ClassSelector();
+        
 
         ClassSelector_Player1.ClassSelectionWidget = ClassSelectionWidget_Player1;
         ClassSelector_Player2.ClassSelectionWidget = ClassSelectionWidget_Player2;
 
-        
-        
         StartCoroutine(WaitForFrame());
 
     }
-    
-    IEnumerator WaitForFrame()
+
+    private IEnumerator WaitForFrame()
     {
-        yield return null; 
-        ShiftClassSelector(ClassSelector_Player1, 0);
-        ShiftClassSelector(ClassSelector_Player2, 0);
+        //The icon widgets go to (0,0) before any frames are processed so the selection icons are stuck in the bottom left corner of the screen unless I do this hack.
+        
+        GameInstance.ClassType_Player1 = ClassGrid.transform.GetChild(ClassSelector_Player1.ClassSelectionIndex).GetComponent<ClassWidget>().ClassType;
+        GameInstance.ClassType_Player2 = ClassGrid.transform.GetChild(ClassSelector_Player2.ClassSelectionIndex).GetComponent<ClassWidget>().ClassType;
+        yield return null;
+        ToggleClassSelector();
     }
+    
 
     private void Update()
     {
@@ -101,11 +104,11 @@ public class GameManager_Hub : MonoBehaviour
     {
         ClassListCanvas.SetActive(!ClassListCanvas.activeSelf);
         
-        Player1.GetComponent<Player>().immobilized = ClassListCanvas.activeSelf;
-        Player2.GetComponent<Player>().immobilized = ClassListCanvas.activeSelf;
+        GameInstance.PlayersImmobilized = ClassListCanvas.activeInHierarchy;
         
         ShiftClassSelector(ClassSelector_Player1, 0);
         ShiftClassSelector(ClassSelector_Player2, 0);
+
     }   
     
     
@@ -118,7 +121,6 @@ public class GameManager_Hub : MonoBehaviour
             selector.ClassSelectionIndex -= amount;
 
         selector.ClassSelectionWidget.transform.position = ClassGrid.transform.GetChild(selector.ClassSelectionIndex).transform.position;
-        
         
         GameInstance.ClassType_Player1 = ClassGrid.transform.GetChild(ClassSelector_Player1.ClassSelectionIndex).GetComponent<ClassWidget>().ClassType;
         GameInstance.ClassType_Player2 = ClassGrid.transform.GetChild(ClassSelector_Player2.ClassSelectionIndex).GetComponent<ClassWidget>().ClassType;

@@ -4,4 +4,5 @@ public static class GameInstance
 {
     public static GameObject ClassType_Player1;
     public static GameObject ClassType_Player2;
+    public static bool PlayersImmobilized;
 }

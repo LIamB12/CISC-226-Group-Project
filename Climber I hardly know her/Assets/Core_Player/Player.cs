@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(gameObject.GetComponent<BoxCollider2D>().size.x, 0.3f), 0, groundLayer);
+        isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(gameObject.GetComponent<BoxCollider2D>().size.x, 0.1f), 0, groundLayer);
 
         moveInput = 0;
 
@@ -90,29 +90,23 @@ public class Player : MonoBehaviour
         if (Mathf.Abs(rb.linearVelocityX) > maxMoveSpeed)
             moveInput = 0;
 
-        if (immobilized)
-            moveInput = 0;
-        
-        rb.AddForce(new Vector2(moveInput * moveSpeed, 0));
-
         if (moveInput == 0f)
         {
-            if (Mathf.Abs(rb.linearVelocityX) > 1)
-            {
-                rb.AddForce(new Vector2(-rb.linearVelocityX * 10, 0));
-            }
-
+            //if (Mathf.Abs(rb.linearVelocityX) > 1)
+            rb.AddForce(new Vector2(-rb.linearVelocityX * 20, 0));
         }
 
-        if (isGrounded && Input.GetKey(key_Up))
+
+        if (!GameInstance.PlayersImmobilized)
         {
-            rb.AddForce(new Vector2(0, jumpForce));
+            rb.AddForce(new Vector2(moveInput * moveSpeed, 0));
+
+            if (isGrounded && Input.GetKey(key_Up))
+                rb.AddForce(new Vector2(0, jumpForce));
+            
+            if (Input.GetKey(key_Ability) && abilityCooldownTime <= 0)
+                UseAbility();
         }
-
-
-
-        if (Input.GetKey(key_Ability) && abilityCooldownTime <= 0)
-            UseAbility();
 
         if(abilityCooldownTime > 0)
         {
