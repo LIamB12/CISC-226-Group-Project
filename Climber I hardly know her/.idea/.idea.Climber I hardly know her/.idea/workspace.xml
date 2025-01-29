@@ -8,9 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Climber I hardly know her/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Climber I hardly know her/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Climber I hardly know her/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Climber I hardly know her/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Core_Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core_Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Finnegan Folder/GameInstance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Finnegan Folder/GameInstance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Finnegan Folder/GameManager_Hub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Finnegan Folder/GameManager_Hub.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Finnegan Folder/Hub.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Finnegan Folder/Hub.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/Sample Character/Blue Guy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player Classes/Sample Character/Blue Guy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/Sample Character/My Character Class.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player Classes/Sample Character/My Character Class.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,18 +26,28 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2rrqT3Q1QJUy29qLy6HihGDoft5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Discover.Launch.Via.Unity" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="rider.run.widget.enabled.cache" value="false" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RiderProblemsViewState">
     <hideBySeverity>
       <option value="300" />
@@ -65,6 +75,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -75,6 +88,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -96,6 +112,8 @@
       <workItem from="1737740766479" duration="10970000" />
       <workItem from="1737765688026" duration="3023000" />
       <workItem from="1737855900453" duration="1215000" />
+      <workItem from="1737918402162" duration="728000" />
+      <workItem from="1738184713064" duration="763000" />
     </task>
     <servers />
   </component>
