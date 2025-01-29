@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
     
     private void Start()
     {
-        //In the inspector, choose Player_1 for WASDQ and Player_2 for IJKLU
+        //In the inspector, choose Player_1 for WASD and Player_2 for PL;'
         
         if (playerID == PlayerID.Player_1)
         {
@@ -58,16 +58,16 @@ public class Player : MonoBehaviour
             key_Right = KeyCode.D;
             key_Up = KeyCode.W;
             key_Down = KeyCode.S;
-            key_Ability = KeyCode.Q;
+            key_Ability = KeyCode.LeftShift;
             facingDirection = 1;  
         }
         if (playerID == PlayerID.Player_2)
         {
-            key_Left = KeyCode.J;
-            key_Right = KeyCode.L;
-            key_Up = KeyCode.I;
-            key_Down = KeyCode.K;
-            key_Ability = KeyCode.U;
+            key_Left = KeyCode.L;
+            key_Right = KeyCode.Quote;
+            key_Up = KeyCode.P;
+            key_Down = KeyCode.Semicolon;
+            key_Ability = KeyCode.RightShift;
             facingDirection = -1;
         }
 
