@@ -75,6 +75,7 @@ public class Player : MonoBehaviour
         
     }
 
+
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(gameObject.GetComponent<BoxCollider2D>().size.x, 0.1f), 0, groundLayer);
