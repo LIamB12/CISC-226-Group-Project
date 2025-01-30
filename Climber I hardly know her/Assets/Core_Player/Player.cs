@@ -9,18 +9,18 @@ using Debug = UnityEngine.Debug;
 public class Player : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed = 600;
-    public float maxMoveSpeed = 500;
-    public float jumpForce = 1000;
+    public float moveSpeed = 50;
+    public float maxMoveSpeed = 5;
+    public float jumpForce = 400;
 
     [Header("Logic")]
     [SerializeField] private bool isGrounded;
     [Tooltip("Highest possible health")]
-    [SerializeField] protected float MaxHealth;
+    [SerializeField] protected float MaxHealth = 100;
     [Tooltip("Current health")]
     [SerializeField] protected float Health;
     [Tooltip("Time in seconds for ability to recharge")]
-    [SerializeField] protected float abilityCooldownMaxTime;
+    [SerializeField] protected float abilityCooldownMaxTime = 1;
     [Tooltip("Current time in seconds until ability recharges")]
     [SerializeField] protected float abilityCooldownTime;
 
@@ -33,14 +33,13 @@ public class Player : MonoBehaviour
     [HideInInspector] public KeyCode key_Up;
     [HideInInspector] public KeyCode key_Down;
     [HideInInspector] public KeyCode key_Ability;
-    [HideInInspector] public bool immobilized = false;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Rigidbody2D rb;
 
 
     private int moveInput;
-    protected int facingDirection;
+    public int facingDirection;
     
     public enum PlayerID
     {

@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1187974910157267745}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58,7 +58,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7098625517581414480}
@@ -127,11 +127,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7098625517581414480}
-  - component: {fileID: 5488415715427584230}
+  - component: {fileID: 6234546022057183298}
   - component: {fileID: 57151410338899955}
   - component: {fileID: 4445453985519255344}
   m_Layer: 3
-  m_Name: Player
+  m_Name: Wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +146,7 @@ Transform:
   m_GameObject: {fileID: 8520808103047806461}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -154,7 +154,7 @@ Transform:
   - {fileID: 1205043857512158485}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5488415715427584230
+--- !u!114 &6234546022057183298
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,19 +163,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 8520808103047806461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e8a6ea74c4a23448c24b605b392a44, type: 3}
+  m_Script: {fileID: 11500000, guid: b2a2c24c94468964d9833656da18c549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 50
   maxMoveSpeed: 5
-  jumpForce: 150
+  jumpForce: 400
   isGrounded: 0
   MaxHealth: 100
   Health: 0
-  abilityCooldownMaxTime: 0.1
+  abilityCooldownMaxTime: 3
   abilityCooldownTime: 0
   playerID: 0
-  ClassIcon: {fileID: 0}
+  ClassIcon: {fileID: 1943259352628786650, guid: c39d6f935b1b9334aac16749e1eddc39, type: 3}
   key_Left: 0
   key_Right: 0
   key_Up: 0
@@ -186,6 +186,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   rb: {fileID: 57151410338899955}
+  facingDirection: 0
+  AbilityPrefab: {fileID: 8563172876045732804, guid: 97ae763d8ea444743bc7e77fca3eb4c9, type: 3}
 --- !u!50 &57151410338899955
 Rigidbody2D:
   serializedVersion: 5
@@ -257,5 +259,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.8}
   m_EdgeRadius: 0
