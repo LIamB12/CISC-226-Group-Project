@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
     [HideInInspector] public KeyCode key_Ability;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;
 
 
     private int moveInput;
@@ -92,8 +92,7 @@ public class Player : MonoBehaviour
 
         if (moveInput == 0f)
         {
-            //if (Mathf.Abs(rb.linearVelocityX) > 1)
-            rb.AddForce(new Vector2(-rb.linearVelocityX * 20, 0));
+            rb.AddForce(new Vector2(-rb.linearVelocityX * (rb.mass * 5), 0));
         }
 
 

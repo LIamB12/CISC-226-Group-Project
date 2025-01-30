@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1350081095090938722}
   - component: {fileID: 4514345666719525733}
   - component: {fileID: -7326085816964286720}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,8 +48,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expirationTimer: 6
-  damage: 10
-  direction: 0
+  speed: 15
+  damage: 5
+  knockback: 10
   owner: {fileID: 0}
 --- !u!212 &1350081095090938722
 SpriteRenderer:
