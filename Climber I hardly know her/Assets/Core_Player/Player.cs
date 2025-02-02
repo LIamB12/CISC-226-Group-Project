@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
     [HideInInspector] public bool immobilized = false;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] protected Rigidbody2D rb;
 
 
     private int moveInput;
