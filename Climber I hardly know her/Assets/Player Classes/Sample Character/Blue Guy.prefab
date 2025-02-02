@@ -94,6 +94,7 @@ MonoBehaviour:
   key_Up: 0
   key_Down: 0
   key_Ability: 0
+  immobilized: 0
   groundCheck: {fileID: 5539787175470112774}
   groundLayer:
     serializedVersion: 2

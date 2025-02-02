@@ -89,6 +89,12 @@ MonoBehaviour:
   abilityCooldownTime: 0
   playerID: 0
   ClassIcon: {fileID: -7912488119901016360, guid: 0bf0bb5fda120b347b9fcdff82202b26, type: 3}
+  key_Left: 0
+  key_Right: 0
+  key_Up: 0
+  key_Down: 0
+  key_Ability: 0
+  immobilized: 0
   groundCheck: {fileID: 5539787175470112774}
   groundLayer:
     serializedVersion: 2
