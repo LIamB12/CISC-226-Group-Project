@@ -6,15 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0a2842a4-e505-49b9-adfd-d535a72bb4e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Climber I hardly know her/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Climber I hardly know her/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core_Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core_Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/Sample Character/Projectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player Classes/Sample Character/Projectile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/Wizard/Fireball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player Classes/Wizard/Fireball.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/Wizard/Fireball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player Classes/Wizard/Fireball.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/Wizard/Wizard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player Classes/Wizard/Wizard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/Wizard/Wizard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player Classes/Wizard/Wizard.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/Wizard/legoGandalf.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player Classes/Wizard/legoGandalf.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,18 +21,28 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 3
+}]]></component>
   <component name="ProjectId" id="2rrqT3Q1QJUy29qLy6HihGDoft5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Discover.Launch.Via.Unity" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="rider.run.widget.enabled.cache" value="false" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Finnegan-Branch",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RiderProblemsViewState">
     <hideBySeverity>
       <option value="300" />
@@ -109,6 +110,7 @@
       <workItem from="1737918402162" duration="728000" />
       <workItem from="1738184713064" duration="763000" />
       <workItem from="1738201727097" duration="2544000" />
+      <workItem from="1738625358204" duration="272000" />
     </task>
     <servers />
   </component>
