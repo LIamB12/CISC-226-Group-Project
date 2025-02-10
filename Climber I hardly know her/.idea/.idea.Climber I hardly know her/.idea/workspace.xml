@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0a2842a4-e505-49b9-adfd-d535a72bb4e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Climber I hardly know her/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Climber I hardly know her/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Finnegan Folder/Hub.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Finnegan Folder/Hub.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/Chuck/Chuck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player Classes/Chuck/Chuck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/Chuck/Chuck.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player Classes/Chuck/Chuck.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player Classes/Chuck/Chuck.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player Classes/Chuck/Chuck.prefab.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,28 +25,28 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2rrqT3Q1QJUy29qLy6HihGDoft5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Finnegan-Branch",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Finnegan-Branch&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RiderProblemsViewState">
     <hideBySeverity>
       <option value="300" />
@@ -111,6 +115,12 @@
       <workItem from="1738184713064" duration="763000" />
       <workItem from="1738201727097" duration="2544000" />
       <workItem from="1738625358204" duration="272000" />
+      <workItem from="1738707415851" duration="765000" />
+      <workItem from="1738792311389" duration="3439000" />
+      <workItem from="1738877318581" duration="2779000" />
+      <workItem from="1738954973939" duration="255000" />
+      <workItem from="1739050738611" duration="725000" />
+      <workItem from="1739132429491" duration="8991000" />
     </task>
     <servers />
   </component>

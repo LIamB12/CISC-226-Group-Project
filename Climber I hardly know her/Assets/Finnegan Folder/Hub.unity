@@ -1196,6 +1196,7 @@ MonoBehaviour:
   - {fileID: 8520808103047806461, guid: a5dd32d160e58fc4ea064ec07138b479, type: 3}
   - {fileID: 8520808103047806461, guid: 1110c88f514b7534498ec74cc0ffb2fa, type: 3}
   - {fileID: 8520808103047806461, guid: 1360267dd6063a44a89153778a5f04a4, type: 3}
+  - {fileID: 8520808103047806461, guid: 7e1a04f3e91fb7e409812ef15768a706, type: 3}
   ClassWidget: {fileID: 4213640425040038669, guid: e5e90d6b452fe7a44853ae6e779a3349, type: 3}
   ClassSelectionWidget_Player1: {fileID: 249731205}
   ClassSelectionWidget_Player2: {fileID: 1547445757}
