@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
     }
 
 
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(gameObject.GetComponent<BoxCollider2D>().size.x, 0.1f), 0, groundLayer);
 
@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
         if (Mathf.Abs(rb.linearVelocityX) > maxMoveSpeed)
             moveInput = 0;
 
-        if (moveInput == 0f)
+        if (moveInput == 0f && isGrounded)
         {
             rb.AddForce(new Vector2(-rb.linearVelocityX * (rb.mass * 5), 0));
         }
@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
         if (!GameInstance.PlayersImmobilized)
         {
             rb.AddForce(new Vector2(moveInput * moveSpeed, 0));
-
+            
             if (isGrounded && Input.GetKey(key_Up))
                 rb.AddForce(new Vector2(0, jumpForce));
             
