@@ -39,6 +39,7 @@ public class Player : MonoBehaviour
 
 
     private int moveInput;
+    private int BelowMaxSpeed;
     public int facingDirection;
     
     public enum PlayerID
@@ -84,21 +85,28 @@ public class Player : MonoBehaviour
         if (Input.GetKey(key_Left)) moveInput = -1;
         if (Input.GetKey(key_Right)) moveInput = 1;
 
-        if(moveInput != 0)
-            facingDirection = moveInput;
+        if (moveInput != 0)
+           facingDirection = moveInput;
 
-        if (Mathf.Abs(rb.linearVelocityX) > maxMoveSpeed)
-            moveInput = 0;
+        BelowMaxSpeed = 1;
 
-        if (moveInput == 0f && isGrounded)
+        if ((rb.linearVelocityX > maxMoveSpeed) && moveInput == 1)
+            BelowMaxSpeed = 0;        
+        if ((rb.linearVelocityX < -maxMoveSpeed) && moveInput == -1)
+            BelowMaxSpeed = 0;
+
+
+
+        if ((moveInput == 0f || BelowMaxSpeed == 0f) && isGrounded)
         {
-            rb.AddForce(new Vector2(-rb.linearVelocityX * (rb.mass * 5), 0));
+            //if(BelowMaxSpeed == 1) 
+                rb.AddForce(new Vector2(-rb.linearVelocityX * (rb.mass * 5), 0));
         }
 
 
         if (!GameInstance.PlayersImmobilized)
         {
-            rb.AddForce(new Vector2(moveInput * moveSpeed, 0));
+            rb.AddForce(new Vector2(moveInput * moveSpeed * BelowMaxSpeed, 0));
             
             if (isGrounded && Input.GetKey(key_Up))
                 rb.AddForce(new Vector2(0, jumpForce));

@@ -79,9 +79,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eca767b4ac974b34186e9d9c28001cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 50
+  moveSpeed: 600
   maxMoveSpeed: 5
-  jumpForce: 150
+  jumpForce: 1500
   isGrounded: 0
   MaxHealth: 100
   Health: 0
@@ -94,12 +94,12 @@ MonoBehaviour:
   key_Up: 0
   key_Down: 0
   key_Ability: 0
-  immobilized: 0
   groundCheck: {fileID: 5539787175470112774}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   rb: {fileID: 57151410338899955}
+  facingDirection: 0
   AbilityPrefab: {fileID: 8563172876045732804, guid: 16e1db8b58ecd9e4b9d68c4cce8aed73, type: 3}
 --- !u!50 &57151410338899955
 Rigidbody2D:
@@ -114,9 +114,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
+  m_LinearDamping: 3
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 6
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
