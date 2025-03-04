@@ -88,25 +88,32 @@ public class Player : MonoBehaviour
         if (moveInput != 0)
            facingDirection = moveInput;
 
-        BelowMaxSpeed = 1;
+        
+        
+        //Old, Unworking, Bullshit-ass experimental physics movement testing.
+        /*BelowMaxSpeed = 1;
 
         if ((rb.linearVelocityX > maxMoveSpeed) && moveInput == 1)
             BelowMaxSpeed = 0;        
         if ((rb.linearVelocityX < -maxMoveSpeed) && moveInput == -1)
             BelowMaxSpeed = 0;
 
-
-
-        if ((moveInput == 0f || BelowMaxSpeed == 0f) && isGrounded)
+        if ((moveInput == 0f) && isGrounded)
         {
             //if(BelowMaxSpeed == 1) 
-                rb.AddForce(new Vector2(-rb.linearVelocityX * (rb.mass * 5), 0));
-        }
+                //rb.AddForce(new Vector2(-rb.linearVelocityX * (rb.mass * 5), 0));
+        } */
+        
+        
 
+        if (Mathf.Abs(rb.linearVelocityX) > maxMoveSpeed)
+        {
+            rb.linearVelocityX = Mathf.Sign(rb.linearVelocityX) * maxMoveSpeed;
+        }
 
         if (!GameInstance.PlayersImmobilized)
         {
-            rb.AddForce(new Vector2(moveInput * moveSpeed * BelowMaxSpeed, 0));
+            rb.AddForce(new Vector2(moveInput * moveSpeed, 0));
             
             if (isGrounded && Input.GetKey(key_Up))
                 rb.AddForce(new Vector2(0, jumpForce));

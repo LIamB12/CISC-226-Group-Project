@@ -79,27 +79,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eca767b4ac974b34186e9d9c28001cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 600
+  moveSpeed: 300
   maxMoveSpeed: 5
-  jumpForce: 1500
+  jumpForce: 1000
   isGrounded: 0
   MaxHealth: 100
-  Health: 0
+  Health: 100
   abilityCooldownMaxTime: 0.1
   abilityCooldownTime: 0
   playerID: 0
   ClassIcon: {fileID: -7912488119901016360, guid: 0bf0bb5fda120b347b9fcdff82202b26, type: 3}
-  key_Left: 0
-  key_Right: 0
-  key_Up: 0
-  key_Down: 0
-  key_Ability: 0
+  key_Left: 97
+  key_Right: 100
+  key_Up: 119
+  key_Down: 115
+  key_Ability: 304
   groundCheck: {fileID: 5539787175470112774}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   rb: {fileID: 57151410338899955}
-  facingDirection: 0
+  facingDirection: -1
   AbilityPrefab: {fileID: 8563172876045732804, guid: 16e1db8b58ecd9e4b9d68c4cce8aed73, type: 3}
 --- !u!50 &57151410338899955
 Rigidbody2D:

@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a2842a4-e505-49b9-adfd-d535a72bb4e8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Climber I hardly know her/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Climber I hardly know her/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Climber I hardly know her/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Climber I hardly know her/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Camera/CameraMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Camera/CameraMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Core_Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core_Player/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player Classes/Sample Character/My Character Class.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player Classes/Sample Character/My Character Class.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +125,7 @@
       <workItem from="1739156442151" duration="3561000" />
       <workItem from="1740170110474" duration="1754000" />
       <workItem from="1740172109322" duration="7228000" />
+      <workItem from="1741117154708" duration="1980000" />
     </task>
     <servers />
   </component>
