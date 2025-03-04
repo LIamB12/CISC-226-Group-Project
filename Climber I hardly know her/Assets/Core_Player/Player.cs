@@ -114,8 +114,8 @@ public class Player : MonoBehaviour
         if (!GameInstance.PlayersImmobilized)
         {
             rb.AddForce(new Vector2(moveInput * moveSpeed, 0));
-            
-            if (isGrounded && Input.GetKey(key_Up))
+
+            if (isGrounded && rb.linearVelocityY <= 0 && Input.GetKey(key_Up))
                 rb.AddForce(new Vector2(0, jumpForce));
             
             if (Input.GetKey(key_Ability) && abilityCooldownTime <= 0)
