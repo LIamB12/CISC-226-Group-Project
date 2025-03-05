@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public float jumpForce = 400;
 
     [Header("Logic")]
-    [SerializeField] private bool isGrounded;
+    [SerializeField] public bool isGrounded;
     [Tooltip("Highest possible health")]
     [SerializeField] protected float MaxHealth = 100;
     [Tooltip("Current health")]

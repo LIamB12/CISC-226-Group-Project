@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ce812d6c4d1c36245b3165ed8da13747
+guid: 3cf2d0cd11742d846aa52c5423347199
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2265652927982628428
-    second: Babel_platform_0
+      213: -5409481222078826141
+    second: large_pirate_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Babel_platform_0
+      name: large_pirate_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 51
-        height: 9
+        width: 282
+        height: 259
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b1954b7aa8ce80e0800000000000000
-      internalID: -2265652927982628428
+      spriteID: 36978da3d79ade4b0800000000000000
+      internalID: -5409481222078826141
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Babel_platform_0: -2265652927982628428
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
