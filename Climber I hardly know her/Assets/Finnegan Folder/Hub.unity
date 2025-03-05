@@ -1198,6 +1198,7 @@ MonoBehaviour:
   - {fileID: 8520808103047806461, guid: df0ec28ac229e78498d971cc0bce5d8b, type: 3}
   - {fileID: 8520808103047806461, guid: 1360267dd6063a44a89153778a5f04a4, type: 3}
   - {fileID: 8520808103047806461, guid: 7e1a04f3e91fb7e409812ef15768a706, type: 3}
+  - {fileID: 8520808103047806461, guid: 143ed04fad531e74281776d9324ff9a3, type: 3}
   ClassWidget: {fileID: 4213640425040038669, guid: e5e90d6b452fe7a44853ae6e779a3349, type: 3}
   ClassSelectionWidget_Player1: {fileID: 249731205}
   ClassSelectionWidget_Player2: {fileID: 1547445757}
