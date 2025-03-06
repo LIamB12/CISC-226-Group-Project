@@ -12,11 +12,13 @@ public class Player : MonoBehaviour
     public float moveSpeed = 50;
     public float maxMoveSpeed = 5;
     public float jumpForce = 400;
+    public float airMovePenalty = 0.8f;
 
     [Header("Logic")]
-    [SerializeField] public bool isGrounded;
+    [SerializeField] private bool isGrounded;
+    [SerializeField] private bool clampVelocity;
     [Tooltip("Highest possible health")]
-    [SerializeField] public float MaxHealth = 100;
+    [SerializeField] protected float MaxHealth = 100;
     [Tooltip("Current health")]
     [SerializeField] protected float Health;
     [Tooltip("Time in seconds for ability to recharge")]
@@ -87,6 +89,9 @@ public class Player : MonoBehaviour
 
         if (moveInput != 0)
            facingDirection = moveInput;
+        
+        if(isGrounded)
+            clampVelocity = true;
 
         
         
@@ -106,16 +111,23 @@ public class Player : MonoBehaviour
         
         
 
-        if (Mathf.Abs(rb.linearVelocityX) > maxMoveSpeed)
+        if (Mathf.Abs(rb.linearVelocityX) > maxMoveSpeed && clampVelocity)
         {
-            rb.linearVelocityX = Mathf.Sign(rb.linearVelocityX) * maxMoveSpeed;
+            //if (/*isGrounded*/ moveInput != 0)
+                rb.linearVelocityX = Mathf.Sign(rb.linearVelocityX) * maxMoveSpeed;            
+            //else if(moveInput != 0)
+                //rb.linearVelocityX = Mathf.Sign(rb.linearVelocityX) * maxMoveSpeed * 15f;
         }
 
-        if (!GameInstance.PlayersImmobilized)
+        if (!GameInstance.PlayersImmobilized)  
         {
-            rb.AddForce(new Vector2(moveInput * moveSpeed, 0));
+            if (isGrounded)
+                rb.AddForce(new Vector2(moveInput * moveSpeed, 0));
+            else
+                rb.AddForce(new Vector2(moveInput * airMovePenalty * moveSpeed, 0));
 
-            if (isGrounded && rb.linearVelocityY <= 0 && Input.GetKey(key_Up))
+            
+            if (isGrounded && Input.GetKey(key_Up))
                 rb.AddForce(new Vector2(0, jumpForce));
             
             if (Input.GetKey(key_Ability) && abilityCooldownTime <= 0)
