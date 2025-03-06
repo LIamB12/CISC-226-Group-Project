@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     [Header("Logic")]
     [SerializeField] public bool isGrounded;
     [Tooltip("Highest possible health")]
-    [SerializeField] protected float MaxHealth = 100;
+    [SerializeField] public float MaxHealth = 100;
     [Tooltip("Current health")]
     [SerializeField] protected float Health;
     [Tooltip("Time in seconds for ability to recharge")]
