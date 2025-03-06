@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
         Player_2
     }
     
-    private void Start()
+    public void Start()
     {
         //In the inspector, choose Player_1 for WASD and Player_2 for PL;'
         

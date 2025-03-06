@@ -9,8 +9,14 @@ public class Pirate : Player
     [SerializeField] public int chargeTime;
     [SerializeField] public float chargePower;
 
-    /*protected override void UseAbility()
-    {}*/
+    [SerializeField] public GameObject anchorSwing;
+
+    private new void Start()
+    {
+        base.Start();
+
+        anchorSwing.SetActive(false);
+    }
 
     private new void FixedUpdate()
     {
@@ -19,11 +25,14 @@ public class Pirate : Player
         if (isGrounded){ // must be grounded to build 'charge'
 
             if (Input.GetKey(key_Ability)){
+                anchorSwing.SetActive(true);
                 chargeTime ++; // time spend holding button
                 chargePower = chargePower + 1 / math.log(chargeTime + 1); // charge power grows with diminishing returns
             }
             else if(chargeTime > 0){
                 isGrounded = false; // makes "J" launch better but doesnt fix it
+                anchorSwing.SetActive(false);
+                
                 rb.linearVelocity = new Vector2(facingDirection*chargePower*4, chargePower*2); // apply force
                 
                 //reset charge values

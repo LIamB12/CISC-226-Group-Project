@@ -12,7 +12,6 @@ public class Wizard : Player
         GameObject newProjectile = Instantiate(AbilityPrefab, (Vector2)this.transform.position + new Vector2(0.5f * facingDirection, 0), Quaternion.identity);
         newProjectile.GetComponent<Fireball>().direction = facingDirection;
         newProjectile.GetComponent<Fireball>().owner = this;
-        abilityCooldownTime = abilityCooldownMaxTime;
-        
+        abilityCooldownTime = abilityCooldownMaxTime;        
     }
 }
