@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class KillTrigger : MonoBehaviour
 {
 
     [SerializeField] private BoxCollider2D collider;
@@ -8,8 +8,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
 
     // Update is called once per frame
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        collision.gameObject.GetComponent<Player>().TakeDamage(collision.gameObject.GetComponent<Player>().MaxHealth);
+        other.gameObject.GetComponent<Player>().TakeDamage(other.gameObject.GetComponent<Player>().MaxHealth);
     }
+    
+    
 }
