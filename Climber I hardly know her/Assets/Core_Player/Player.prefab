@@ -169,13 +169,15 @@ MonoBehaviour:
   moveSpeed: 50
   maxMoveSpeed: 5
   jumpForce: 150
+  airMovePenalty: 0.8
   isGrounded: 0
+  clampVelocity: 0
   MaxHealth: 100
   Health: 0
   abilityCooldownMaxTime: 0.1
   abilityCooldownTime: 0
   playerID: 0
-  ClassIcon: {fileID: 0}
+  ClassIcon: {fileID: -7912488119901016360, guid: 0bf0bb5fda120b347b9fcdff82202b26, type: 3}
   key_Left: 0
   key_Right: 0
   key_Up: 0
@@ -186,6 +188,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   rb: {fileID: 57151410338899955}
+  facingDirection: 0
 --- !u!50 &57151410338899955
 Rigidbody2D:
   serializedVersion: 5
