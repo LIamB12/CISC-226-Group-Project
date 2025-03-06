@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager_Hub : MonoBehaviour
@@ -74,6 +75,10 @@ public class GameManager_Hub : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.C))
             ToggleClassSelector();
+
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            SceneManager.LoadScene(sceneName: "SampleScene");
+        }
 
         if (ClassListCanvas.activeSelf)
         {
