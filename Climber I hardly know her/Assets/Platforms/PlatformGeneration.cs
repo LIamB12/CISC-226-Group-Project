@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlatformGeneration : MonoBehaviour
 {
     public GameObject platformPrefab; // Reference to the platform prefab
-    public float spawnRangeX = 8f;    // Horizontal range for spawning platforms
+    public float spawnRangeX = 4f;    // Horizontal range for spawning platforms
     public float spawnHeight = 5f;   // Vertical distance between platforms
     public float initialSpawnY = 0f; // Starting height for spawning platforms
 

@@ -12,10 +12,11 @@ public class Player : MonoBehaviour
     public float moveSpeed = 50;
     public float maxMoveSpeed = 5;
     public float jumpForce = 400;
-    public float airMovePenalty = 0.3f;
+    public float airMovePenalty = 0.8f;
 
     [Header("Logic")]
     [SerializeField] private bool isGrounded;
+    [SerializeField] private bool clampVelocity;
     [Tooltip("Highest possible health")]
     [SerializeField] protected float MaxHealth = 100;
     [Tooltip("Current health")]
@@ -88,6 +89,9 @@ public class Player : MonoBehaviour
 
         if (moveInput != 0)
            facingDirection = moveInput;
+        
+        if(isGrounded)
+            clampVelocity = true;
 
         
         
@@ -107,15 +111,15 @@ public class Player : MonoBehaviour
         
         
 
-        if (Mathf.Abs(rb.linearVelocityX) > maxMoveSpeed && isGrounded)
+        if (Mathf.Abs(rb.linearVelocityX) > maxMoveSpeed && clampVelocity)
         {
-            if (isGrounded)
+            //if (/*isGrounded*/ moveInput != 0)
                 rb.linearVelocityX = Mathf.Sign(rb.linearVelocityX) * maxMoveSpeed;            
-            else
-                rb.linearVelocityX = Mathf.Sign(rb.linearVelocityX) * maxMoveSpeed * 15f;
+            //else if(moveInput != 0)
+                //rb.linearVelocityX = Mathf.Sign(rb.linearVelocityX) * maxMoveSpeed * 15f;
         }
 
-        if (!GameInstance.PlayersImmobilized)
+        if (!GameInstance.PlayersImmobilized)  
         {
             if (isGrounded)
                 rb.AddForce(new Vector2(moveInput * moveSpeed, 0));
