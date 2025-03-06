@@ -39,7 +39,6 @@ public class Chuck : Player
 
             GrabbedPlayer = hit.transform.gameObject;
             Player player = GrabbedPlayer.GetComponent<Player>();
-            Debug.Log(hit.transform.gameObject.name);
             player.rb.simulated = false;
             player.transform.parent = HoldPos.transform;
             player.transform.localPosition = Vector2.zero + new Vector2(0, GetComponent<BoxCollider2D>().size.x / 2);
@@ -82,6 +81,8 @@ public class Chuck : Player
             GrabbedPlayer.GetComponent<Rigidbody2D>().linearVelocity = rb.linearVelocity;
             GrabbedPlayer.GetComponent<Rigidbody2D>().linearVelocityX += ThrowForce * facingDirection;
             GrabbedPlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(ThrowForce * facingDirection, 2), ForceMode2D.Impulse);
+            Debug.Log(GrabbedPlayer.GetComponent<Rigidbody2D>().linearVelocity);
+
         }
     }
 }

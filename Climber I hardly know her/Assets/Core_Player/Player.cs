@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public float moveSpeed = 50;
     public float maxMoveSpeed = 5;
     public float jumpForce = 400;
+    public float airMovePenalty = 0.3f;
 
     [Header("Logic")]
     [SerializeField] private bool isGrounded;
@@ -106,14 +107,21 @@ public class Player : MonoBehaviour
         
         
 
-        if (Mathf.Abs(rb.linearVelocityX) > maxMoveSpeed)
+        if (Mathf.Abs(rb.linearVelocityX) > maxMoveSpeed && isGrounded)
         {
-            rb.linearVelocityX = Mathf.Sign(rb.linearVelocityX) * maxMoveSpeed;
+            if (isGrounded)
+                rb.linearVelocityX = Mathf.Sign(rb.linearVelocityX) * maxMoveSpeed;            
+            else
+                rb.linearVelocityX = Mathf.Sign(rb.linearVelocityX) * maxMoveSpeed * 15f;
         }
 
         if (!GameInstance.PlayersImmobilized)
         {
-            rb.AddForce(new Vector2(moveInput * moveSpeed, 0));
+            if (isGrounded)
+                rb.AddForce(new Vector2(moveInput * moveSpeed, 0));
+            else
+                rb.AddForce(new Vector2(moveInput * airMovePenalty * moveSpeed, 0));
+
             
             if (isGrounded && Input.GetKey(key_Up))
                 rb.AddForce(new Vector2(0, jumpForce));
