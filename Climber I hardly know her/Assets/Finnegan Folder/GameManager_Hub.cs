@@ -108,6 +108,25 @@ public class GameManager_Hub : MonoBehaviour
     private void ToggleClassSelector()
     {
         ClassListCanvas.SetActive(!ClassListCanvas.activeSelf);
+
+        // when class selection closes
+        if (!ClassListCanvas.activeSelf){
+            // gather class selection from widget
+            GameObject p1_class_selection = ClassGrid.transform.GetChild(ClassSelector_Player1.ClassSelectionIndex).GetComponent<ClassWidget>().ClassType;
+            GameObject p2_class_selection = ClassGrid.transform.GetChild(ClassSelector_Player2.ClassSelectionIndex).GetComponent<ClassWidget>().ClassType;
+
+            // if selection is different from current class, change current class, kill player
+            if (p1_class_selection != GameInstance.ClassType_Player1){
+                GameInstance.ClassType_Player1 = p1_class_selection;
+                Player1.GetComponent<Player>().TakeDamage(Player1.GetComponent<Player>().MaxHealth);  
+            }
+            
+            // same as P1
+            if (p2_class_selection != GameInstance.ClassType_Player2){
+                GameInstance.ClassType_Player2 = p2_class_selection;
+                Player2.GetComponent<Player>().TakeDamage(Player2.GetComponent<Player>().MaxHealth);
+            }
+        }
         
         GameInstance.PlayersImmobilized = ClassListCanvas.activeInHierarchy;
         
@@ -127,7 +146,5 @@ public class GameManager_Hub : MonoBehaviour
 
         selector.ClassSelectionWidget.transform.position = ClassGrid.transform.GetChild(selector.ClassSelectionIndex).transform.position;
         
-        GameInstance.ClassType_Player1 = ClassGrid.transform.GetChild(ClassSelector_Player1.ClassSelectionIndex).GetComponent<ClassWidget>().ClassType;
-        GameInstance.ClassType_Player2 = ClassGrid.transform.GetChild(ClassSelector_Player2.ClassSelectionIndex).GetComponent<ClassWidget>().ClassType;
     }
 }
