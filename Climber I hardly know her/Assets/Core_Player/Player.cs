@@ -15,10 +15,10 @@ public class Player : MonoBehaviour
     public float airMovePenalty = 0.8f;
 
     [Header("Logic")]
-    [SerializeField] private bool isGrounded;
-    [SerializeField] private bool clampVelocity;
+    [SerializeField] public bool isGrounded;
+    [SerializeField] public bool clampVelocity;
     [Tooltip("Highest possible health")]
-    [SerializeField] protected float MaxHealth = 100;
+    [SerializeField] public float MaxHealth = 100;
     [Tooltip("Current health")]
     [SerializeField] protected float Health;
     [Tooltip("Time in seconds for ability to recharge")]
