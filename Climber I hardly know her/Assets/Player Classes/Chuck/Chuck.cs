@@ -76,12 +76,12 @@ public class Chuck : Player
         if (Input.GetKeyUp(key_Ability) && playerGrabbed)
         {
             playerGrabbed = false;
+            GrabbedPlayer.GetComponent<Player>().clampVelocity = false;
             GrabbedPlayer.transform.parent = null;
             GrabbedPlayer.GetComponent<Rigidbody2D>().simulated = true;
             GrabbedPlayer.GetComponent<Rigidbody2D>().linearVelocity = rb.linearVelocity;
             GrabbedPlayer.GetComponent<Rigidbody2D>().linearVelocityX += ThrowForce * facingDirection;
             GrabbedPlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(ThrowForce * facingDirection, 2), ForceMode2D.Impulse);
-            Debug.Log(GrabbedPlayer.GetComponent<Rigidbody2D>().linearVelocity);
 
         }
     }

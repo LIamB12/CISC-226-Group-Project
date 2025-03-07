@@ -201,8 +201,9 @@ MonoBehaviour:
   moveSpeed: 300
   maxMoveSpeed: 5
   jumpForce: 1000
-  airMovePenalty: 0.3
+  airMovePenalty: 0.8
   isGrounded: 1
+  clampVelocity: 0
   MaxHealth: 100
   Health: 100
   abilityCooldownMaxTime: 3
@@ -220,10 +221,10 @@ MonoBehaviour:
     m_Bits: 64
   rb: {fileID: 57151410338899955}
   facingDirection: 1
-  HoldPos: {fileID: 0}
+  HoldPos: {fileID: 3688527594182027702}
   abilityFailureMaxTime: 1
   abilityFailureTime: -1
-  ThrowForce: 10
+  ThrowForce: 50
   playerGrabbed: 0
   GrabbedPlayer: {fileID: 0}
 --- !u!50 &57151410338899955

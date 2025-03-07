@@ -82,7 +82,9 @@ MonoBehaviour:
   moveSpeed: 300
   maxMoveSpeed: 5
   jumpForce: 1000
+  airMovePenalty: 0.8
   isGrounded: 0
+  clampVelocity: 0
   MaxHealth: 100
   Health: 100
   abilityCooldownMaxTime: 0.1
