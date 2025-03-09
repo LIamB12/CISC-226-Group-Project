@@ -266,6 +266,7 @@ MonoBehaviour:
   AbilityPrefab: {fileID: 0}
   chargeTime: 0
   chargePower: 0
+  speedReducedUnderAbility: 3
   anchorSwing: {fileID: 8813137541446418067}
 --- !u!1 &8813137541446418067
 GameObject:
