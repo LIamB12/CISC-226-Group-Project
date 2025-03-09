@@ -242,8 +242,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 300
   maxMoveSpeed: 5
-  jumpForce: 1000
+  jumpForce: 1300
+  airMovePenalty: 0.8
   isGrounded: 0
+  clampVelocity: 0
   MaxHealth: 100
   Health: 0
   abilityCooldownMaxTime: 1
